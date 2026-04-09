@@ -144,7 +144,7 @@ public sealed class CplusplusEmitter {
             NameExpr n => n.Name,
             MemberAccessExpr m => $"{EmitExpr(m.Target)}.{m.MemberName}",
             CallExpr c => $"{EmitExpr(c.Callee)}({string.Join(", ", c.Args.Select(EmitExpr))})",
-            BinaryExpr b => $"{EmitExpr(b.Left)} {(b.Op)} {EmitExpr(b.Right)}",
+            BinaryExpr b => $"{EmitExpr(b.Left)} {(b.Op.ToOpCode())} {EmitExpr(b.Right)}",
             _ => throw new NotSupportedException($"Unknown expr: {e.GetType().Name}")
         };
     }

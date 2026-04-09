@@ -49,7 +49,7 @@ ctorDecl
   ;
   
 dtorDecl
-  : accessModifier? DTOR '~' Identifier '(' ')' block
+  : accessModifier? DTOR '~'Identifier '(' ')' block
   ;
 
 paramList
