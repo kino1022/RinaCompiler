@@ -3,14 +3,14 @@ class rina_test {
     pri let x: int;
     
     pub rina_test() {
-        this.x = 0;
+        x = 0;
     }
     
     pub ~rina_test() {
     }
     
     pub fn increment(x: int) : int {
-        this.x += 1;
+        x += 1;
     }
     
 }
