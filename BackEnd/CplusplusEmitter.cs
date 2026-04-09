@@ -116,7 +116,7 @@ public sealed class CplusplusEmitter {
 
                 case InnerBlockNode inner:
                     sb.AppendLine("    {");
-                    EmitBlockBody(sb, block);
+                    EmitBlockBody(sb, inner.Block);
                     sb.AppendLine("    }");
                     break;
 

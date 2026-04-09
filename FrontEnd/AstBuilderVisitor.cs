@@ -84,7 +84,7 @@ public sealed class AstBuilderVisitor : RinaLangBaseVisitor<ASTNode> {
     public override ASTNode VisitLetDecl(RinaLangParser.LetDeclContext context) {
         var name = context.Identifier().GetText();
         var type = (TypeRef)Visit(context.typeRef())!;
-        var init = context.expr() is null ? null : (IExprNode)Visit(context.expr());
+        var init = context.expr() is null ? null : (IExprNode)Visit(context.expr())!;
         return new FieldNode(Access.Public, IsConst: true, name, type, init);
     }
 
