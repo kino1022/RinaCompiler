@@ -45,11 +45,11 @@ functionDecl
   ;
   
 ctorDecl
-  : accessModifier? CTOR '(' paramList? ')' (':' typeRef)? block
+  : accessModifier? Identifier '(' paramList? ')' (':' typeRef)? block
   ;
   
 dtorDecl
-  : accessModifier? DTOR '~'Identifier '(' ')' block
+  : accessModifier? '~'Identifier '(' ')' block
   ;
 
 paramList

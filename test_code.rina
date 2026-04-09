@@ -1,4 +1,16 @@
 class rina_test {
-    pub var a: i32;
-    pub let b: i32;
+
+    pri let x: int;
+    
+    pub rina_test() {
+        this.x = 0;
+    }
+    
+    pub ~rina_test() {
+    }
+    
+    pub fn increment(x: int) : int {
+        this.x += 1;
+    }
+    
 }
