@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Antlr" Version="3.5.0.2" />
+      <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.1" />
+      <PackageReference Include="Antlr4BuildTasks" Version="12.14.0" />
+      <Antlr4 Include="RinaLang.g4" >
+        <Visitor>true</Visitor>
+        <Listener>true</Listener>
+      </Antlr4>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ClCompile Include="result.cpp" />
+    </ItemGroup>
+
+</Project>

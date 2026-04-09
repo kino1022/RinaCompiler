@@ -1,0 +1,4 @@
+class rina_test {
+    pub var a: i32;
+    pub let b: i32;
+}
